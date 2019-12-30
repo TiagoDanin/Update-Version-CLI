@@ -75,10 +75,10 @@ const main = async () => {
 		process.exit(1)
 	}
 
-	const fileRaw = fs.readFileSync(data.file).toString()
+	const fileRaw = fs.readFileSync(data.file).toString().replace(/xml[\s]*version/, '') // Remove XML init tag
 
-	// Regex: https://regex101.com/r/Xhc3oV/2
-	const currentVersionMatch = fileRaw.match(/["']version["'][\s:=]*["']([\w.-]*)["']/)
+	// Regex: https://regex101.com/r/Xhc3oV/5
+	const currentVersionMatch = fileRaw.match(/["']*version["']*[\s:=]*["']([\w.-]*)["']/)
 	if (!currentVersionMatch) {
 		console.log(chalk.bold.red('⬢ Key \'version\' in file not found!'))
 		process.exit(1)
