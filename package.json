@@ -5,7 +5,7 @@
 		"update-version-cli": "index.js"
 	},
 	"preferGlobal": true,
-	"version": "0.0.2",
+	"version": "1.0.0",
 	"description": "Update Version number in NPM Package, Quasar & Cordova",
 	"author": {
 		"email": "TiagoDanin@outlook.com",
