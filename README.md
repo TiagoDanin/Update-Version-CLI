@@ -4,6 +4,8 @@
 
 Update Version number in NPM Package, Quasar & Cordova
 
+<p align="center"><img src="screenshot.png"></p>
+
 ## Installation
 
 Module available through the [npm registry](https://www.npmjs.com/). It can be installed using the  [`npm`](https://docs.npmjs.com/getting-started/installing-npm-packages-locally) or [`yarn`](https://yarnpkg.com/en/) command line tools.
@@ -59,7 +61,7 @@ yarn test
 	<summary><a href="https://ghub.io/xo">xo</a>: JavaScript linter with great defaults</summary>
 	<b>Author</b>: Sindre Sorhus</br>
 	<b>License</b>: MIT</br>
-	<b>Version</b>: ^0.24.0
+	<b>Version</b>: ^0.25.3
 </details>
 
 ## Contributors
