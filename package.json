@@ -50,6 +50,7 @@
 		"index.js"
 	],
 	"dependencies": {
+		"chalk": "^3.0.0",
 		"enquirer": "^2.3.2",
 		"semver": "^7.1.1"
 	},
