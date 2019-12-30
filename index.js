@@ -78,17 +78,17 @@ const main = async () => {
 	const fileRaw = fs.readFileSync(data.file).toString().replace(/xml[\s]*version/, '') // Remove XML init tag
 
 	// Regex: https://regex101.com/r/Xhc3oV/5
-	const currentVersionMatch = fileRaw.match(/["']*version["']*[\s:=]*["']([\w.-]*)["']/)
+	const currentVersionMatch = fileRaw.match(/(?<full>["']*version["']*[\s:=]*["'](?<version>[\w.-]*)["'])/)
 	if (!currentVersionMatch) {
 		console.log(chalk.bold.red('⬢ Key \'version\' in file not found!'))
 		process.exit(1)
 	}
 
-	console.log(`${chalk.bold.white('▶ Current version')}: ${chalk.cyan(currentVersionMatch[1])}`)
+	console.log(`${chalk.bold.white('▶ Current version')}: ${chalk.cyan(currentVersionMatch.groups.version)}`)
 
-	data.version = await getNewVersion(currentVersionMatch[1])
-	const newVersion = currentVersionMatch[0].replace(currentVersionMatch[1], data.version)
-	const output = fileRaw.replace(currentVersionMatch[0], newVersion)
+	data.version = await getNewVersion(currentVersionMatch.groups.version)
+	const newVersion = currentVersionMatch.groups.full.replace(currentVersionMatch.groups.version, data.version)
+	const output = fileRaw.replace(currentVersionMatch.groups.full, newVersion)
 
 	showFragment(output, newVersion, data.version)
 	const done = await prompt({
