@@ -51,7 +51,7 @@
 	],
 	"dependencies": {
 		"chalk": "^3.0.0",
-		"enquirer": "^2.3.2",
+		"enquirer": "^2.3.4",
 		"semver": "^7.1.1"
 	},
 	"devDependencies": {
