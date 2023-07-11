@@ -52,7 +52,7 @@
 	"dependencies": {
 		"chalk": "^4.1.1",
 		"enquirer": "^2.3.6",
-		"semver": "^7.3.5"
+		"semver": "^7.5.4"
 	},
 	"devDependencies": {
 		"xo": "^0.33.1"
