@@ -55,7 +55,7 @@
 		"semver": "^7.3.5"
 	},
 	"devDependencies": {
-		"xo": "^0.33.1"
+		"xo": "^3.0.2"
 	},
 	"xo": {
 		"semicolon": false
